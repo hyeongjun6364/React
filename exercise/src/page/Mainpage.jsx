@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import PostList from "../list/PostList";
+import PostList from "C:\Users\USER\react\exercise\src\list\PostList.jsx";
 import Button from "../ui/Button";
 import data from '../../data.json';
 

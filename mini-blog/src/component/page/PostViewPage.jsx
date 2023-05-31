@@ -52,8 +52,8 @@ function PostViewPage(props) {
     const navigate = useNavigate();
     // useParams는 라우팅 매개변수를 추출하기위해 사용됨
     // URL이 /post/123일 경우 postid는 123이 된다
-    const { postId } = useParams();
-    //id가 같은 객체가 할당됨
+    const  {postId}  = useParams();
+    //id가 같은 객체가 할당됨 일치하는 해당요소가 반환됨
     const post = data.find((item) => {
         return item.id == postId;
     });
