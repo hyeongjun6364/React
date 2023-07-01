@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     width: calc(100% - 32px);
-    padding: 16px;
+    padding: 8px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -17,19 +17,22 @@ const Wrapper = styled.div`
     }
 `;
 
-const TitleText = styled.p`
-    font-size: 20px;
-    font-weight: 500;
+const ContentText = styled.p`
+    font-size: 16px;
+    white-space: pre-wrap;
 `;
 
-function PostListItem(props) {
-    const { post, onClick } = props;
 
-    return (
-        <Wrapper onClick={onClick}>
-            <TitleText>{post.title}</TitleText>
-        </Wrapper>
-    );
+function CommentListItem(props) {
+    const {comment}=props
+
+  return (
+    <Wrapper>
+        <ContentText>
+            {comment.content}
+        </ContentText>
+    </Wrapper>
+  )
 }
 
-export default PostListItem;
+export default CommentListItem

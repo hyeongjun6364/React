@@ -41,6 +41,7 @@ function MainPage(props) {
 
                 <PostList
                     posts={data}
+                    //인자로 왜 아무 인자나 들어갈수있는지 이해가 안됨.
                     onClickItem={(item) => {
                         navigate(`/post/${item.id}`);
                     }}

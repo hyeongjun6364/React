@@ -18,6 +18,7 @@ function toFahrenheit(celsius) {
 
 function tryConvert(temperature, convert) {
     const input = parseFloat(temperature);
+    //input이 NAN이라면 빈문자열 반환
     if (Number.isNaN(input)) {
         return "";
     }
@@ -49,6 +50,7 @@ function Calculator(props) {
         <div>
             <TemperatureInput
             // props로 scale, temperature, onTemperatureChange를 TemperatureInput 컴포넌트에게 준다.
+            // onTemperatureChange 함수는 TemperatureInput컴포넌트에서 입력값이 변경될 때 호출된다.
                 scale="c"
                 temperature={celsius}
                 onTemperatureChange={handleCelsiusChange}

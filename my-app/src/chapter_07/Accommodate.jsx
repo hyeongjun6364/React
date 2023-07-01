@@ -6,6 +6,7 @@ const MAX_CAPACITY = 10;
 function Accommodate(props){
     const [isFull, setIsFull] = useState(false);
     //커스텀 훅, 0을 가지는 count 변수화 increaseCount, decreaseCount함수를 반환
+    //useCounter.jsx에 있는 useCounter훅을 사용
     const [count, increaseCount, decreaseCount] = useCounter(0);
     useEffect(()=>{
         console.log("hi");
@@ -23,7 +24,7 @@ function Accommodate(props){
         setIsFull(count >= MAX_CAPACITY);
         console.log(`Current count value: ${count}`);
 
-    }, [count]);
+    },[count]);
 
     return(
         <div style={{padding:16}}>
@@ -34,7 +35,7 @@ function Accommodate(props){
             <button onClick={decreaseCount}>퇴장</button>
 
             {isFull && <p style={{color:"red"}}>정원이 가득찼습니다.</p>}
-            </div>
+        </div>
         
     );
 }

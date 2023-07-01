@@ -11,7 +11,7 @@ const StyledButton = styled.button`
 
 function Button(props) {
     const { title, onClick } = props;
-
+//button의 이름이 title이 있다면 title로 없다면 button으로 대체
     return <StyledButton onClick={onClick}>{title || "button"}</StyledButton>;
 }
 

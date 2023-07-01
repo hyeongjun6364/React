@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 function SignUp() {
     const[name,setName]=useState("");
     const[gender,setGender]=useState("남자");
-
+    //arrow function
     const handleChangeName = (event) =>{
         setName(event.target.value);
     }

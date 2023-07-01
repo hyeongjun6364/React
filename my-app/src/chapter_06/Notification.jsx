@@ -14,7 +14,7 @@ const styles = {
         fontSize: 16,
     },
 };
-
+//mount란 실제 dom에 삽입되어 브라우저에서 렌더링되는 과정을 말함.
 class Notification extends React.Component {
     constructor(props) {
         super(props);

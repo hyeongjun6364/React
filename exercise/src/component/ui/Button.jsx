@@ -1,0 +1,19 @@
+import React from 'react'
+
+const StyledButton = styled.button`
+    padding: 8px 16px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+`;
+
+function Button(props) {
+    const {title,onclick}=props;
+
+  return (
+    <StyledButton onclick={onclick}>{title || "button"} </StyledButton>
+  )
+}
+
+export default Button
