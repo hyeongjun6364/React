@@ -50,6 +50,8 @@ function PostViewPage() {
     const post = data.find((item) => {
         return item.id == postId;
     });
+
+    const [comment, setComment] = useState("");
   return (
     <Wrapper>
         <Container>

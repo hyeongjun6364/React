@@ -23,7 +23,7 @@ const Container = styled.div`
         }
     }
 `;
-
+// useState훅을 이용해 title,content가 바뀔때마다 컴포넌트가 재 렌더링 된다.
 function PostWritePage(props) {
     const navigate = useNavigate();
 
@@ -37,6 +37,7 @@ function PostWritePage(props) {
                     height={20}
                     value={title}
                     //event handler 값이 바뀔때마다 이벤트 발생
+                    //value속성은 해당 입력필드의 현재값과 연결된 상태 변수를 나타낸다. 변경될때 마다 해당 값을 상태로 업데이트 가능
                     onChange={(event) => {
                         setTitle(event.target.value);
                     }}
@@ -46,6 +47,7 @@ function PostWritePage(props) {
                     height={480}
                     value={content}
                     //event handler 값이 바뀔때마다 이벤트 발생
+                    //event객체가 담긴 정보를 event.target.value를 return하여 content를 업데이트 한다.
                     onChange={(event) => {
                         setContent(event.target.value);
                     }}
