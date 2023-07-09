@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useRef, useCallback, useState} from 'react';
 import {produce} from 'immer';
-
+//불변성 유지 하는 immer 이용
 const App=() => {
   const nextID = useRef(1);
   const [form, setForm] = useState({name:'',username:''});
