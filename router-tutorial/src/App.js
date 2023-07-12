@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import{Route, Routes} from 'react-router-dom';
 import About from './pages/About';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Route path='/' element={<Home/>} />
 
     <Route path='/about' element={<About/>} />
+    <Route path='/profile/:usename' element={<Profile/>} />
    </Routes>
   );
 }
