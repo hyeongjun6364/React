@@ -16,8 +16,9 @@ const data= {
 
 
 const Profile = () =>{
+    //useParam => url을 객체 형태로 조회 가능 
     const Params=useParams();
-    const profile = data[Params,username];
+    const profile = data[Params.username];
     return(
         <div>
             <h1>사용자 프로필</h1>
