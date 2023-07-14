@@ -1,8 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 function Articles() {
   return (
+    //Outlet을 통해 Article 컴포넌트가 보여지게 된다.
     <div>
+        
+        <Outlet/>
         <ul>
             <li>
                 <Link to="/articles/1">게시글 1</Link>
