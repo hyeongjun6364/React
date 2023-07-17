@@ -39,7 +39,7 @@ function NewsItem({article}) {
   return (
     <NewsItemBlock>
         {
-            urlTolmage&&(<div className='thumbnail'>
+            urlTolmage && (<div className='thumbnail'>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                     <img src={urlTolmage} alt="thumbnail"/>
                 </a>
