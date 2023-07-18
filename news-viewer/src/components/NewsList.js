@@ -12,7 +12,7 @@ const NewsListBlock = styled.div`
         @media screen and (max-width:768px){
             width:100%;
             padding-left: 1rem;
-            paddint-right: 1rem;
+            padding-right: 1rem;
         }
     `;
 
@@ -26,7 +26,7 @@ const NewsListBlock = styled.div`
 
       const[articles,setArticles]=useState(null);
       const[loading,setLoading]=useState(false);
-
+// 컴포넌트가 렌더링 될 때 한번만 API를 호출하여 뉴스 아이템을 가져온다.
       useEffect(()=>{
         const fetchData=async()=>{
           setLoading(true);

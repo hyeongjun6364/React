@@ -8,10 +8,12 @@ import Categories from './components/Categories';
 const App=()=> {
   
   return(
-    <>
-    <Categories/>
-    <NewsList/>
-    </>
+    <div>
+      <Categories/>
+      <NewsList/>
+    </div>
+    
+    
   )
 
 }
