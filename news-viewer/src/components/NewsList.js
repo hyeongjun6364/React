@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NewsItem  from './NewsItem'
 import styled from 'styled-components'
 import axios from 'axios';
+import usePromise from '../lib/usePromise';
 
 const NewsListBlock = styled.div`
         box-sizing:border-box;
@@ -21,38 +22,28 @@ const NewsListBlock = styled.div`
         description:'내용',
         url:'https://google.com',
         urlToImage:"https://via.placeholder.com/160"
-    }
+      }
+      
     const NewsList=({category})=>{
-
-      const[articles,setArticles]=useState(null);
-      const[loading,setLoading]=useState(false);
-// 컴포넌트가 렌더링 될 때 한번만 API를 호출하여 뉴스 아이템을 가져온다.
-      useEffect(()=>{
-        const fetchData=async()=>{
-          setLoading(true);
-          try{
-            const query=category==='all'?'':`&category=${category}`;
-            const response=await axios.get(
-              `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=c5edc801b19b4055a20e6d4b93dac840`,
-            )
-            setArticles(response.data.articles)
-          }
-          catch(e){
-            console.log(e);
-          }
-          setLoading(false);
-        };
-        fetchData();
-      },[category]);
+      const [loading, response, error] = usePromise(async ()=>{
+        const query=category==='all'?'':`&category=${category}`;
+        return await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=c5edc801b19b4055a20e6d4b93dac840`,
+      )},[category]);
+      
+  
 
       //대기중일때
       if(loading){
         return<NewsListBlock>대기 중...</NewsListBlock>
       }
-      
-      if(!articles){
-        return null;
+      if(!response){
+        return null
       }
+      if(error){
+        return <NewsListBlock>에러 발생</NewsListBlock>;
+      }
+      const {articles}=response.data;
       return (
         <NewsListBlock>
           {articles.map(article=>(

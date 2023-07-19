@@ -8,8 +8,8 @@ import {Route,Routes} from 'react-router-dom'
 import NewsPage from './pages/NewsPage';
 // news api key:c5edc801b19b4055a20e6d4b93dac840
 const App=()=> {
-  const [category,setCategory]=useState('all');
-  const onSelect=useCallback(category => setCategory(category),[])
+  // const [category,setCategory]=useState('all');
+  // const onSelect=useCallback(category => setCategory(category),[])
 
   return(
     <Routes>
