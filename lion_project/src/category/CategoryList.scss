@@ -1,4 +1,5 @@
 .category-list {
+  min-width: 1500px;
   display: flex;
   list-style: none;
   padding: 0;
@@ -49,6 +50,7 @@
   font-size: 20px;
   margin: 0;
   margin-left: 720px;
+  max-width: 500px;
 }
 
 .search-container {

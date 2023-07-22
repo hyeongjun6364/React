@@ -1,39 +1,38 @@
-import React, { useState } from 'react';
-import CategoryItem from './CategoryItem';
-import './CategoryList.scss'; // 새로운 SCSS 파일 추가
+import React from 'react';
+import './Question.scss';
+import { useState } from 'react';
+import QuestionItem from './QuestionItem';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
-const CategoryList = () => {
-  const categories = [
-    { id: 1, name: '질문방' },
-    { id: 2, name: 'category 2' },
-    { id: 3, name: 'category 3' },
-    { id: 4, name: 'category 4' },
-    { id: 5, name: 'category 5' },
-    { id: 6, name: 'category 6' },
-    { id: 7, name: 'category 7' },
-  ];
+function Question() {
+    const question_item=[
+        { id: 1, name: 'Q&A' },
+        { id: 2, name: 'Study' },
+        { id: 3, name: 'category 3' },
+        { id: 4, name: 'category 4' },
+        { id: 5, name: 'category 5' },
+        
+    ]
+    const [selectedQuestion, setSelectedQuestion] = useState(null);
+    const [searchKeyword, setSearchKeyword] = useState('');
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [searchKeyword, setSearchKeyword] = useState('');
-
-  const handleCategoryClick = (categoryId) => {
-    setSelectedCategory(categoryId);
+  const handleCategoryClick = (QuestionId) => {
+    setSelectedQuestion(QuestionId);
   };
 
   const handleSearchChange = (event) => {
     setSearchKeyword(event.target.value);
   };
 
-  const filteredCategories = categories.filter((category) =>
+  const filteredCategories = question_item.filter((category) =>
     category.name.toLowerCase().includes(searchKeyword.toLowerCase())
   );
-
-
   return (
     <div>
       <div className="cate">
+        <Link to="/">
         <h2 className=''>Solver</h2>
+        </Link>
+        
         <div className="search-container">
           <input
             type="text"
@@ -52,21 +51,21 @@ const CategoryList = () => {
           
         </div>
       </div>
-      <ul className="category-list">
+        <ul className="category-list">
         {filteredCategories.map((category) => (
-          <CategoryItem
+          <QuestionItem
             key={category.id}
             category={category}
-            isSelected={selectedCategory === category.id}
+            isSelected={selectedQuestion === category.id}
             onClick={handleCategoryClick}
           />
         ))}
       </ul>
-      {selectedCategory !== null && (
-        <p>선택한 카테고리:  </p>
+      {selectedQuestion !== null && (
+        <p>선택한 카테고리: </p>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CategoryList;
+export default Question

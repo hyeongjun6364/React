@@ -21,7 +21,8 @@ const LoginForm = () => {
   };
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
+    <div className='login-center'>
+<form className="login-form" onSubmit={handleSubmit}>
       <h3>로그인</h3>
       <div className="form-group">
         <label htmlFor="email">이메일:</label>
@@ -45,6 +46,8 @@ const LoginForm = () => {
       </div>
       <button type="submit" className="submit-button">로그인</button>
     </form>
+    </div>
+    
   );
 };
 
