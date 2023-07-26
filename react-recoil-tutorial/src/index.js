@@ -10,7 +10,7 @@ root.render(
   <RecoilRoot>
     <React.StrictMode>
     <App />
-  </React.StrictMode>
+    </React.StrictMode>
   </RecoilRoot>
   
 );
