@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import CounterContainers from './containers/CounterContainers';
+import React from 'react';
+import SampleContainer from './containers/SampleContainer';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <CounterContainers/>
+      <SampleContainer/>
     </div>
   );
-}
-
+};
 export default App;
