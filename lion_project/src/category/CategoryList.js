@@ -3,6 +3,7 @@ import CategoryItem from './CategoryItem';
 import './CategoryList.scss'; // 새로운 SCSS 파일 추가
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
+import SliderComponent from '../slider/Slider';
 const CategoryList = () => {
   const categories = [
     { id: 1, name: '질문방' },
@@ -65,6 +66,7 @@ const CategoryList = () => {
       {selectedCategory !== null && (
         <p>선택한 카테고리:  </p>
       )}
+      <SliderComponent/>
     </div>
   );
 };

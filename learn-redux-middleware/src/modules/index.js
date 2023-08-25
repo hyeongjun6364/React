@@ -1,10 +1,16 @@
 import {combineReducers} from 'redux';
-import counter from './counter';
+import counter,{counterSaga} from './counter';
 import sample from './sample';
-
+import loading from './loading';
+import { all } from 'redux-saga/effects';
 const rootReducer = combineReducers({
   counter,
-  sample
+  sample,
+  loading,
 });
 
+export function* rootSaga(){
+  //all 함수는 여러 saga를 합쳐주는 역할을 합니다.
+  yield all([counterSaga()]);
+}
 export default rootReducer;

@@ -3,6 +3,7 @@ import './Question.scss';
 import { useState } from 'react';
 import QuestionItem from './QuestionItem';
 import { Link } from 'react-router-dom';
+import QnAlist from '../QnA/QnAlist.js'
 function Question() {
     const question_item=[
         { id: 1, name: 'Q&A' },
@@ -60,11 +61,15 @@ function Question() {
             onClick={handleCategoryClick}
           />
         ))}
+        
       </ul>
       {selectedQuestion !== null && (
         <p>선택한 카테고리: </p>
       )}
+      <QnAlist/>
     </div>
+    
+    
   )
 }
 

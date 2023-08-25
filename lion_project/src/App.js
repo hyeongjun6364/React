@@ -7,9 +7,17 @@ import './App.scss'
 import {Route,Routes} from 'react-router-dom'
 import Question from './QuestionPage/Question';
 import QnA from './QuestionPage/QnA'
-
+import SliderComponent from './slider/Slider';
+import QnAlist from './QnA/QnAlist';
+import QnAex from './QnA/QnAex'
+import Ex from './QnA/ex'
+import Ex1 from'./QnA/ex1'
+import Axios from './Axios/axios'
+import { useState,useEffect } from 'react';
 function App() {
+  
   return (
+    
     <Routes>
       <Route path='/' element={<CategoryList/>}/>
       <Route path='/Login' element={<LoginForm/>}/>

@@ -5,7 +5,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import { TokenAtom, isLoginSelector } from "../Recoil/TokenAtom";
+import { TokenAtom, isLoginSelector } from "../recoil/TokenAtom";
 import { useLocation, useNavigate } from "react-router";
 
 const Login = () => {
