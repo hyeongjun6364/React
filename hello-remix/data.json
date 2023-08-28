@@ -1,0 +1,54 @@
+{
+  "stories": [
+    {
+      "id": 1,
+      "title": "첫 번째 이야기",
+      "body": "Remix..."
+    },
+    {
+      "id": 2,
+      "title": "두 번째 이야기",
+      "body": "Data Loading...!"
+    },
+    {
+      "id": 3,
+      "title": "세 번째 이야기",
+      "body": "Data Write!!!"
+    },
+    {
+      "title": "gd",
+      "body": "gd",
+      "id": 4
+    },
+    {
+      "title": "dfsfe",
+      "body": "fsfs",
+      "id": 5
+    },
+    {
+      "title": "안녕",
+      "body": "새로운 이야기\n",
+      "id": 6
+    },
+    {
+      "title": "ㅇㅇ",
+      "body": "ㅇㅇ",
+      "id": 7
+    },
+    {
+      "title": "안녕안녕",
+      "body": "안녕하세요\n",
+      "id": 8
+    },
+    {
+      "title": "리다이렉트",
+      "body": "리다이렉트 성공~!",
+      "id": 9
+    },
+    {
+      "title": "리다이렉트- 다시시도",
+      "body": "리다이렉트 성공~!",
+      "id": 10
+    }
+  ]
+}
