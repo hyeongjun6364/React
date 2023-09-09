@@ -1,9 +1,11 @@
 const Koa = require('koa');
 const Router = require('koa-router');
+const bodyParser = require('koa-bodyparser')
 
 const api = require('./api');
 const app = new Koa();
 const router = new Router();
+app.use(bodyParser());
 
 //Router 설정
 router.use('/api',api.routes());
